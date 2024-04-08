@@ -2,8 +2,14 @@
 import Card from "../single-card/card.component";
 import './card-list.styles.css';
 
+import { Monster } from "../../App";
+
+type CardListProps = {
+    monsters: Monster[]
+}
+
 //Functional component
-const CardList = (props) => {
+const CardList = (props: CardListProps) => {
     const {monsters} = props
     return (
         <div className="card-list" key={1}>
@@ -16,15 +22,5 @@ const CardList = (props) => {
         </div>
     )
 }
-
-// class CardList extends Component {
-//     render() { 
-//         const { monsters } = this.props; 
-
-//         return (
-//             <Card allMonsters={monsters} />
-//         )
-//     }
-// }
 
 export default CardList
